@@ -1,0 +1,105 @@
+
+Parameterization - TestNG
+
+Static - common for all test cases or common among all the testcases
+Dynamic - Test data (Excel/db)
+
+
+What kind of data is kept in your excel/db? - testdata
+
+
+The common things like @before and after methods in super class
+
+to passing the data in dynaic, We have to declare it in super class 
+the mechanisam is called @dataProvider
+
+* dataProvider annotation help us to supply test data to @Test
+
+Each row is one set of test data
+
+what kind of application is an excel is?   - > window based application
+ 
+Selenium interact with only web based application it can not interact with 
+window based application
+
+Third party open source products to interact with excel 
+
+Apache POI -other kind of office application(stable software, overcome lots of challanges)
+Aspose
+JavaXL - only xl 
+
+
+Apache POI - 
+
+* is the product of a Huge enterprise of 'Apache Maven' 
+
+* Maven is one of its product
+
+POI - Poor Obfuscation Implementation
+
+
+1. GO to the folder and open the file(path/location)
+2. Select the sheet(Sheet name/index)
+3. You need to iterate over the rows - row count
+4. You need col size to iterate over the cells
+5. Go to each cell and read the data
+
+
+
+
+
+
+
+
+
+invocationcount -  tells how many times TestNG should run a test method
+example:
+
+ @Test(invocationCount=5) 
+    public void test1() throws InterruptedException { 
+        System.out.println("Thread ID: "+Thread.currentThread().getId()); 
+    } 
+
+OutPut:
+
+Thread ID: 1
+Thread ID: 1
+Thread ID: 1
+Thread ID: 1
+Thread ID: 1
+
+Above method ran 5 times, a single thread will be assigned to run the method one by one..
+
+ThreadPoolSize
+
+threadPoolSize tells the TestNG to run the test method through multiple threads(browser windows). Though 
+this attribute is ignored if invocationCount is not specified. 
+
+ @Test(threadPoolSize=3, invocationCount=5) 
+    public void test1() throws InterruptedException { 
+        System.out.println("Thread ID: "+Thread.currentThread().getId()); 
+    } 
+}
+
+Above method ran 5 times, but 3 threads(chrome windows) shared the 5 times of test run…(threads 11, 12 and 13)
+
+
+
+Annotaitons &attributes
+Parameterization(Static @dynamic)
+
+Runner Framework | Based on java rival to JUnit
+
+Cedric Bueast
+
+Test Suite
+Parallel Execution
+Multiple TestData(Static & Dynamic)
+Report Generation
+Excel Integration
+
+Annotaion :
+
+ All the annotations are interfaces and all the attributes are methods
+
+

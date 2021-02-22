@@ -41,3 +41,8 @@ we can not extend the classes that define step definitions or hooks
 tags = {"@smoke,@regresion"} - execute the scenario with regression"or" smoke
 tags = {"@smoke","@regresion"} - execute the scenario with regression "and" smoke
 tags = {"~@regresion"} - execute all the scenarios except regression
+
+cucumber can not be run in parallel because of implimentation
+
+parallel run in cucumber can be achived by(only have example data will be run in parallel)
+runner class->dataprovider='true'

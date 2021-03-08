@@ -12,6 +12,10 @@ Methods designed in Alert interface:
  4) getText	- Get the text on the alert (do this before accept/dismiss)
 
 https://recipes.timesofindia.com/ --->sweet alert
+https://javascript.info/alert-prompt-confirm--->Alert Example
+
+
+
 
 1) Alert is an Interface, implemented by RemoteAlert
     and RemoteAlert is called by RemoteTargetLocator class

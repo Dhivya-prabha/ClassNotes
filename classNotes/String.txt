@@ -31,6 +31,23 @@ String strobj = new String("Hello"); //String object
 ******************************************************************
 
 
+
+
+		String s1 = new String("Hello");
+		String s2 = new String("Hello");
+		String str1 = "Hello";
+		String str2 = "Hello";
+		
+		System.out.println("Memory address: " + VM.current().addressOf(s1));
+		System.out.println("Memory address: " + VM.current().addressOf(s2));
+		System.out.println("Memory address: " + VM.current().addressOf(str1));
+		System.out.println("Memory address: " + VM.current().addressOf(str2));
+		
+		
+*******************************************************************************************	
+		
+
+
 String str1 = "Hello";
 	String str2 = "Hello";
 	System.out.println(str1+"------>" +System.identityHashCode(str1));

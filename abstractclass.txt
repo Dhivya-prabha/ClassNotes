@@ -6,6 +6,19 @@ Another form of encapsulation is, Data Hiding
 Abstract class in Java:
 
  when we are driving a car, we are only concerned about driving the car like start/stop the car, accelerate/ break, etc. We are not concerned about how the actual start/stop mechanism or accelerate/brake process works internally. We are just not interested in those details.
+ 
+ abstract - collage projects synopsis, essay summary(outline) its not completed one 
+
+
+If I go the ATM, swipe the card, enter the amount and type the password, I can get the money from that
+ machine. But I don't know the process behind the ATM machine.
+
+If i dial a number in my phone to call a person and press call, the call will connect to that corresponding
+ number. But I don't know the process of how the call connect to that exact number.
+
+Same as like this, abstraction class hide the implementation details and showing only the functionality
+
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
 
 If there is an abstract method in a class, that class must be abstract.
 
@@ -26,6 +39,7 @@ It can have abstract and non-abstract methods.
 It cannot be instantiated.
 It can have constructors and static methods also.
 It can have final methods which will force the subclass not to change the body of the method.
+
 
 
 abstract class bank {

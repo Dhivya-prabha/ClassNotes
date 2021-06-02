@@ -100,25 +100,21 @@ public class NestedFrameCount {
 	}
 
 	public static void main(String[] args) {
-
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+	System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://leafground.com/pages/frame.html");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 
 		int size = driver.findElementsByTagName("iframe").size();
-
 		int count = size;
-		
 		for (int i = 0; i < size; i++) {
+			driver.switchTo().frame(i);
+			count = count + driver.findElementsByTagName("iframe").size();
 			driver.switchTo().defaultContent();
-			int countInnerFrame = countInnerFrame(i);
-			System.out.println(countInnerFrame);
-			count = count + countInnerFrame;
 		}
-		System.out.println("total number of frames: " + count);
-	}
+		System.out.println(count);
+
 }
 
 

@@ -4,6 +4,7 @@ One feature file can have multiple scenario
 Each scenario can have multiple steps
 Each keyword can repeat any number of times
 
+Step level keywords:
 Given - pre condition
 When - condition
 Then - Post condition

@@ -1,4 +1,5 @@
 
+String is a class or non primitive datatype
 String is a sequence of characters. 
 
 String is immutable(once created cannot be changed.)

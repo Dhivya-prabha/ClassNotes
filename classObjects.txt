@@ -12,8 +12,9 @@ Behaviour of the object - The behavior of an object are its predefined functions
 
 Finally, Class is an collection of state and behavior.
 
+In programming, world properties are in the form of attributes and the behaviors are in the form of methods.
 
-If there is a class called Indian, we are all represent the class but the spoken language of each of us is different.
+
 
 If u open a more than one tab in chrome, each tab is an object.
 But all the tabs represents Chrome. Object is an representation of a class.

@@ -25,4 +25,4 @@ Object is an instance of a class. Instance means, representation
 https://www.youtube.com/watch?v=4z5cOr2wkT4
 
 
-
+You can't. Variables defined inside a method are local to that method. If you want to share variables between methods, then you'll need to specify them as member variables of the class.

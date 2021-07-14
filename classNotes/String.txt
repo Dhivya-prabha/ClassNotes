@@ -106,9 +106,10 @@ String str1 = "Java programming";
 ********************************************************************************************
 More than one data in a single variable is called as array
 Arrays index are starts with 0
-
+A specific element in an array is accessed by its index. 
 if we does not give any value to some index it'll alocate 0 to that index
 
+String[] myArray  = new String[] { "Hello", "World" };
 
 String[] str = {"Red","Blue","Black","White"}
 	for (int i = 0; i < abc.length; i++) {

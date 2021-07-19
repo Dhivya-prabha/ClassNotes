@@ -30,6 +30,18 @@ properties of one method can used in another method in java?
 You can't. Variables defined inside a method are local to that method. If you want to share variables between methods, then you'll need to specify them as member variables of the class.
 
 
+  
+Access Specifiers:
+====================
+public  - Global Level Access (inside Package (extends,objects) + outside package (extends,objects))
+
+protected - (inside Package (extends,objects) + outside package (extends))
+
+default - Package level access (extends,objects) 
+
+private - Class level access
+
+
 
 
 

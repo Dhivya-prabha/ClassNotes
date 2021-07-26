@@ -1,5 +1,6 @@
 Inheritance:
 In Java, it is possible to inherit attributes and methods from one class to another. 
+extends is the keyword used to inherit the properties of a class
 Advantage of inheritance is to avoid the wastage of memeory
 Using child class object we can access the base classes
 We can access one class property from another class without creating object

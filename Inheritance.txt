@@ -1,7 +1,5 @@
 Inheritance:
-
-Every object has it's own memory space.
-We can call one class from another class by inheritance.
+In Java, it is possible to inherit attributes and methods from one class to another. 
 Advantage of inheritance is to avoid the wastage of memeory
 Using child class object we can access the base classes
 We can access one class property from another class without creating object

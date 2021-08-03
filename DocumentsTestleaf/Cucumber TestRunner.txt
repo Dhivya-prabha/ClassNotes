@@ -1,0 +1,24 @@
+1) What is the starting point of execution for feature files? How does it recognize the feature files to be executed?
+	When integrated with Selenium, the starting point of execution must be from the TestRunner class.
+	TestRunner class is used to provide the link between the feature file and step definition file. Below is the sample representation of how TestRunner class will look like. A TestRunner class is generally an empty class with no class definition.
+
+Exmaple:
+	Package com.sample.TestRunner
+
+	importcucumber.api.CucumberOptions; 
+	importcucumber.api.junit.Cucumber;
+
+	@CucumberOptions(features="Features",glue={"StepDefinition"}) 
+	public class Runner extends AbstractTestngCucumberTests {
+	}
+
+	Feature Files are recognized by CucumberOptions tag through the features attribute and Step Defintion files are recognixed by CucumberOptions tag through the glue attribute.
+
+2) What is the purpose of the Cucumber Options tag? Explain about monochrome and dryRun options in Cucumber.
+	CucumberOptions tag is used to provide the link between the feature file and step definition file through features and glue attributes.
+
+	Monochrome option makes the console output for Cucumber test much more readable.
+	Its value can be either true or false. If it is set to false, then the console output is not as readable as it should be.
+
+	dryRun is used to verify that every step in the feature file have corresponding code in Step Definition or not. So, in case if any function gets missed in the Step definition for any step of feature file, then dryRun will give a message.
+	Its value can be set either true or false.

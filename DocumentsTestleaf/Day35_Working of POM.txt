@@ -1,0 +1,40 @@
+1.
+Page Object Model Framework has become very popular test automation framework in the industry and we prefer to use it because of its easy test maintenance. It also reduces the duplication of code.
+
+POM (Page Object Model) Framework has certain rules and those rules are,
+
+1) Create each Page/each section of a Page as individual classes.
+
+2) Every Page should inherit common Wd methods.
+
+3) Every Page should have Constructor in order to determine whether the execution of code lands in correct page.
+
+4) Every action we perform on each web element or verification of each web element, should be the method of the Page.
+
+5) Every method should return the webpage where it would land on (this may retains in same page or some other page).
+
+
+Advantages:
+
+There is clean separation between test code and page specific code such as locators and layout.
+
+There is single repository for operations/actions offered by the page (through methods) rather than having these actions scattered through out the tests.
+
+
+2.
+public class ReadExcel()
+{
+XSSFWorkBook wBook = new XSSFWorkBook("./data/login.xlsx");
+
+XSSFSheet wSheet = wBook.getSheet(0);
+
+XSSFCell cell = wSheet.getRow(2).getCell(2);
+
+System.out.println("Value in 2nd Row 3rd COlumn is...."+cell.getStringCellValue());
+
+}
+
+
+
+
+

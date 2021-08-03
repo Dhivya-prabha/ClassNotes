@@ -1,0 +1,35 @@
+Answer for Question
+1)What is the use of <package> tag in TestNG xml ?
+
+In testng.xml file we can specify the specific package name , which needs to be executed.
+In a project there may be many packages, but we want to execute only the selected packages.
+We need to specify the names of the packages in between the package tags.
+Example:
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Suite1" verbose="5" >
+  <test name="Regression1"   >
+    <packages>
+      <package name="test.sample" />
+   </packages>
+ </test>
+</suite>
+TestNG will look at all the classes in the package test.sample and will retain only classes that have TestNG annotations.
+
+2)How to run method in paraller using TestNG xml from single class file?
+
+
+The method can be run in paraller using Method groups.You can also exclude or include individual methods:
+<suite name="My suite" parallel="methods" thread-count="2">
+<test name="Test1">
+  <classes>
+    <class name="example1.Test1">
+      <methods>
+        <include name="TestMethod1"/>
+        <include name="TestMethod2"/>
+      </methods>
+     </class>
+  </classes>
+</test>
+
+TestNG will run all your test methods in separate threads. Dependent methods will also run in separate threads but they will respect the order that you specified.

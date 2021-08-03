@@ -1,0 +1,35 @@
+1.
+Page Object Model Framework has become very popular test automation framework in the industry and we prefer to use it because of its easy test maintenance. It also reduces the duplication of code.
+
+POM (Page Object Model) Framework has certain rules and those rules are,
+
+1) Create each Page/each section of a Page as individual classes.
+
+2) Every Page should inherit common Wd methods.
+
+3) Every Page should have Constructor in order to determine whether the execution of code lands in correct page.
+
+4) Every action we perform on each web element or verification of each web element, should be the method of the Page.
+
+5) Every method should return the webpage where it would land on (this may retains in same page or some other page).
+
+
+Advantages:
+
+There is clean separation between test code and page specific code such as locators and layout.
+
+There is single repository for operations/actions offered by the page (through methods) rather than having these actions scattered through out the tests.
+
+
+2.Data Providers
+When you need to pass complex parameters or parameters that need to be created from Java (complex objects, objects read from a property file or a database, etc…), in such cases parameters can be passed using Dataproviders. A Data Provider is a method annotated with @DataProvider. A Data Provider returns an array of objects.
+
+Step 1: Create a test case of Login Application with TestNG Data Provider.
+
+Step 2:  Create a Test Data sheet.
+
+Step 3: Create functions to Open & Read data from Excel
+
+Step 4: Create a TestNg test case for accepting data from Excel using Data Provider.
+
+Step 5: Run the test against the Test Case name in the Test Data file.

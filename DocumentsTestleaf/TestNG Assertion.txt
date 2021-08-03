@@ -1,0 +1,53 @@
+1) What is Soft Assert and Hard Assert in TestNG?
+
+Hard Assert – Hard Assert throws an AssertException immediately when an assert statement fails and test suite continues with next @Test
+
+The disadvantage of Hard Assert – It marks method as fail if assert condition gets failed and the remaining statements inside the method will be aborted.
+
+To overcome this we need to use Soft Assert. Let’s see what is Soft Assert.
+
+Soft Assert – Soft Assert collects errors during @Test. Soft Assert does not throw an exception when an assert fails and would continue with the next step after the assert statement.
+
+If there is any exception and you want to throw it then you need to use assertAll() method as a last statement in the @Test and test suite again continue with next @Test as it is.
+
+Example:
+	public class SoftAssertion {
+ 
+ 	@Test
+	 public void softAssert(){
+	 SoftAssert softAssertion= new SoftAssert();
+	 System.out.println("softAssert Method Was Started");
+	 softAssertion.assertTrue(false);
+	 System.out.println("softAssert Method Was Executed");
+	 }
+ 
+ 	@Test
+	 public void hardAssert(){
+	 System.out.println("hardAssert Method Was Started");
+	 Assert.assertTrue(false);
+	 System.out.println("hardAssert Method Was Executed");
+	 }
+	}
+
+Output:
+	
+hardAssert Method Was Started
+softAssert Method Was Started
+softAssert Method Was Executed
+
+2) How to disable/ignore a test case in TestNG ?
+
+To disable the test case we use the parameter enabled = false to the @Test annotation.
+
+@Test(enabled = false)
+
+3) How to run a group of test cases using TestNG?
+
+TestNG allows you to perform sophisticated groupings of test methods. Not only can you declare that methods belong to groups, but you can also specify groups that contain other groups. Then TestNG can be invoked and asked to include a certain set of groups (or regular expressions) while excluding another set.  This gives you maximum flexibility in how you partition your tests and doesn’t require you to recompile anything if you want to run two different sets of tests back to back.
+
+Groups are specified in your testng.xml file and can be found either under the <test> or <suite> tag. Groups specified in the <suite> tag apply to all the <test> tags underneath.
+
+@Test (groups = { "smokeTest", "functionalTest" })
+public void loginTest(){
+System.out.println("Logged in successfully");
+}

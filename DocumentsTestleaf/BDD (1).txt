@@ -1,0 +1,11 @@
+1) Explain what is BDD (Behaviour Driven Development) ?
+
+BDD or Behaviour driven development is a process of developing software based on TDD (Test Driven Development) which focusses on behavioural specification of software units (testing the system than a particular piece of code.
+
+2) What softare do you need to run a Cucumber Web Test ?
+
+* Java and its Development Kit
+* Cucumber
+* IDE like ActiveState
+* Watir ( To simulate browser)
+* Ansicon and rspec (if required)

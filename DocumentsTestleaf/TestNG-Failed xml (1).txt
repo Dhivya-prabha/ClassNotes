@@ -1,0 +1,13 @@
+1)How do you run failed test cases using TestNG?
+
+Ans: We can execute failed test cases using TestNG in Selenium, By using “testng-failed.xml”
+
+->After the first run of an automated test run. Right click on Project and Click on Refresh.
+->A folder will be generated named “test-output” folder. Inside test-output folder, you could find “testng-failed.xml”
+->Run “testng-failed.xml” to execute the failed test cases again.
+
+2)A class has 4 methods a, b, c, d. Here the method 'b' depends on 'c' and method 'c' depends on 'a'. Then what will be the order of execution?
+
+Ans:All independent methods will execute first and followed by depend methods.
+
+The order of execution is method 'a' -> method 'd' -> method 'c' and 'b'.

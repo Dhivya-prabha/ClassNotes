@@ -1,0 +1,18 @@
+Answers for yesterday’s daily question
+1) Given that you have 250 test cases but you do not want to run 150 of  them unless the other 100 is successful . How do you achieve them in testng?
+Make first 100 test cases as a single group [example: @test(groups={"smoke"})], then make next  150 test cases another group [example: : @test(groups={"sanity"})] and also make it depends on previous group (example: [@test(groups="sanity", dependsongroups ="smoke")].
+This will force testcases 101 - 250 to run only after first 100 test cases run successfully.
+
+2)Is it possible to run testcases in dataprovider in parallel for each test data given? If yes ,how to do that? ? If no , why can’t it be done?
+
+Data providers can run in parallel with the attribute parallel:
+
+@dataprovider(parallel = true)
+
+Parallel data providers running from an xml file share the same pool of threads, which has a size of 10 by default. 
+
+You can modify this value in the <suite> tag of your xml file:
+
+<suite name="suite1" data-provider-thread-count="20" >
+
+If you want to run a few specific data providers in a different thread pool, you need to run them from a different xml file.

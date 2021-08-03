@@ -1,0 +1,77 @@
+Exception Handling in Java:
+*It is a mechanism to handle runtime Errors to handle the normal flow of prgram or application.
+*Runtime Errors like ClassNotFoundException,IOException,SQLException,RemoteException...
+
+
+Advantage of using Exception handling:
+
+Line 1;
+Line 2;
+Line 3;
+Line 4;
+Line 5;
+Line 6;
+Line 7;
+Line 8;
+Line 9;
+Line 10;
+Line 11;
+Line 12;// Error occurs
+Line 13;
+Line 14;
+Line 15;
+Line 16;
+Line 17;
+Line 18;
+
+The Particular error can be handled and execute the rest of the code using Exception Handling
+Where as it is not possible in a normal java program without using Exception Handling.
+
+ Hiereachy of Java Exceptions:
+                              Throwable
+               Exception                                          Error
+             ClassNotFound                                  StackOverflow; VirtualMachineError;OutOFmemeoryError
+             IOException
+             SQLException
+             RuntimeException
+          --NullPointerException
+           --ArithmeticException
+           --IndexOutOfBoundException
+           -StringIndexOutOfBoundException
+           -ArrayIndexOutOfBoundException
+          
+
+Types OF Exception:
+1. Checked Exception - Compile Time: IOException,SQLException...
+2. Unchecked Exception - RunTime Exception :-ArrayIndexOutOfBoundException;NullPointerException;ArithmeticException....
+3. Error - Irrecoverable :VirtualMachineError;OutOFmemeoryError
+
+
+
+Keywords Used in ExceptionHandling:
+
+try: The block where we specify the exception code.try should be followed by carch or finally.
+catch: This block handles the Exception.It is mandatory to either have a try block on top of catch or either a finally followed by Catch block.
+finally:This block contains of important code to execute the program,even if the exception is handled or not the finally block will be executed.
+throw: This keyword is used to throw an Exception
+throws: This keyword is used to declare an exception. it doesnt throw exception.[used in Methods] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

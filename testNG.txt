@@ -30,7 +30,7 @@ thread-count = "5"
 
 verbose
 
-The default vale of verbose is 1. If the value is 1, u can not get the expection 
+The default vale of verbose is 2. If the value is 1, u can not get the expection 
 
 Parameterization - TestNG
 

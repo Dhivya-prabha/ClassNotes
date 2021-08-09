@@ -1,0 +1,22 @@
+Interface :
+
+Set of rules or Contract
+
+an interface is a collection of abstract methods and constants (i.e. static and final fields).
+It is used to achieve complete abstraction.
+
+An interface can contain any number of methods.
+
+Interface methods do not have a body - the body is provided by the "implement" class
+
+On implementation of an interface, you must override all of its methods
+
+When a class implements an interface, it should implimets all of its methods. 
+If a class does not perform all the behaviors of the interface, the class must declare itself as abstract.
+
+ Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be 
+achieved with interfaces, because the class can implement multiple interfaces. 
+
+Note: To implement multiple interfaces, separate them with a comma (see example below).
+
+ we can provide interface methods to the third-party vendors for their implementation.

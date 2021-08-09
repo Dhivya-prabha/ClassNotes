@@ -1,0 +1,60 @@
+
+Junit 4, 3, 2 has less features compared to testNG.
+
+Junit Jupiter 5 has the advanced ad fantastic feature than testNG
+If there are 800 testcases, I have to execute those test cases and generate a report 
+as a pdf with test desription with proper screenshots. Now think about a memory...
+
+It'll occupy lots of your memeory. Is it a correct idea to create a 800 pdf file 
+report and pass it to the client?
+But if it is a HTML file report, it will contain all the 800 testcase reports and I ca pass only a single file
+That's the reason we are prefer to create a HTML file report
+
+
+Using Java language we can programmatically create a HTML file, But if i create a HTML file, I have to take care of the 
+Look and feel and execution time dispalay time everthing these are all taking too much of tie. 
+
+But someone already created the code base to generate the reports and released that as a open 
+source  and that is 100% compatable with the java language. So we are se that open source product 
+in our project.
+
+
+ExtentReport:
+
+It is one of a framework. And this is for reporting Framework like a testNG.
+But TestNG is onlt for execution purpose. Like that it is a separate frame work
+
+another reporters types
+
+TestNG
+Allure
+Junit 5
+Extend Reports
+ReportNG
+Reporter Portal
+
+https://www.extentreports.com/
+
+It provides multiple and different kinds of output
+
+
+https://www.extentreports.com/docs/javadoc/com/aventstack/extentreports/package-summary.html
+
+What are the classes used in extentReport?
+ExtentHTML report
+ExtentReports
+ExtentTest
+MediaEntityBuilder
+
+To add extent report, we need to add a plugin in pom.xml
+
+<dependency>
+     <groupId>com.aventstack</groupId>
+     <artifactId>extentreports</artifactId>
+     <version>3.1.5</version>
+</dependency>
+
+This version 3.1.5 contains all the components and features for free
+
+
+

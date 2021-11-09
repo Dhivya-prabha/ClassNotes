@@ -1,3 +1,10 @@
+
+BDD (Behavior-driven development) Testing is a technique of agile software development and is as an extension of TDD, i.e., Test Driven Development
+BDD – centers around stories that describe the expected behavior of an application. The idea is to describe how the application should behave in a very simple user/business-focused language. which means, test cases are written in a natural language that even non-programmers can read.
+With BDD-based tests running during your Continuous Integration process, you can give stakeholders fast feedback on whether the functionality is actually implemented and working–in terms that they can easily understand
+
+With BDD, tests are created using the gherkin language.
+
 One .feature file can have only one feature
 That suould be written at first
 One feature file can have multiple scenario  

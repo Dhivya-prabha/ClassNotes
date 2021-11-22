@@ -1,0 +1,313 @@
+What is the difference between artifactId and groupId?
+groupId – a unique base name of the company or group that created the project
+artifactId – a unique name of the project
+
+1) Why string objects are immutable in java?
+
+Because java uses the concept of string literal.Suppose there are 5 reference variables,all referes to one object "sachin".
+If one reference variable changes the value of the object, it will be affected to all the reference variables. That is why string 
+objects are immutable in java.
+
+String is Immutable in Java because String objects are cached in String pool. Since cached String literals are shared between 
+multiple clients there is always a risk, where one client's action would affect all another client.
+
+2) what is static in java?
+
+In Java, static keyword is mainly used for memory management. It can be used with variables, methods, blocks and nested classes. 
+It is a keyword which is used to share the same variable or method of a given class. Basically, static is used for a constant 
+variable or a method that is same for every instance of a class. 
+
+3) What is the use of constructor in java?
+A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a 
+class is created. It can be used to set initial values for object attributes
+
+4) Explain abstraction and interface respect of selenium with some example
+
+WebDriver driver = new ChromeDriver();
+
+In above line “WebDriver” is an interface which lists all the methods required to be present for Browser Interactions; 
+irrespective of Browser type.
+
+No how would all the Browser’s Driver namely, firefox, IE, Safari etc could ensure that they have all the required methods 
+for Browser Interaction.
+
+Lets assume we do not have Interfaces and Abstract classes implementation for Web Driver.
+
+In that case, for a multi-Browser tests, code would like as below:
+
+//Psedo Code
+
+if  ( BrowserType==”Chrome”){
+
+ChromeDriver driver = new ChromeDriver();
+
+}elseif(BrowserType==”Firefox”){
+
+FireFox driver = new FirefoxDriver();
+
+}
+
+Abstract class plays a major role in framework. All the reusable methods that you will use across all page classes are written in this
+abstract class say Reusable library and reusable methods for click, sendkeys, fetchTooltip etc.
+
+5) Will findElements throw an error when the element is not found?
+Whereas, the findElements method returns  an empty list when the element is not available or doesn’t exist on the page. It doesn’t 
+throw NoSuchElementException.
+
+6) What’s the purpose of a TestNG XML File?
+
+Seamless parallel execution
+Executing multiple test cases for various Java class files
+Group execution of test cases
+Supports Parameterisation in TestNG and data-driven testing
+Including or excluding a particular test method
+Includes names of class, folders, and methods
+Clearer test summary with separate HTML and extent reports
+TestNG listeners automatically create logs
+
+
+
+
+
+
+
+
+
+TestNg
+
+1) What are the annotations used in the TestNG?
+The following are the annotations used in the TestNG are:
+
+Precondition annotations
+Precondition annotations are executed before the execution of test methods The Precondition annotations are @BeforeSuite, @BeforeClass, @BeforeTest, @BeforeMethod.
+Test annotation
+Test annotation is specified before the definition of the test method. It is specified as @Test.
+Postcondition annotations
+The postcondition annotations are executed after the execution of all the test methods. The postcondition annotation can be @AfterSuite, @AfterClass, @AfterTest, @AfterMethod.
+
+
+2) How can we disable the test case from running?
+We can disable the test case from running by using the enabled attribute. We can assign the false value to the enabled attribute, in this way we can disable the test case from running.
+
+package com.javatpoint;  
+import org.testng.annotations.Test;  
+public class Test_cases  
+{  
+ @Test(enabled=false)  
+ public void testcase1()  
+ {  
+     System.out.println("testcase1");  
+ }  
+ @Test   
+ public void testcase2()  
+ {  
+     System.out.println("testcase2");  
+ }  
+  
+}  
+
+
+3) What is the difference between soft assertion and hard assertion?
+Soft Assertion: In case of Soft Assertion, if TestNG gets an error during @Test, it will throw an exception when an assertion fails and continues with the next statement after the assert statement.
+
+Hard Assertion: In the case of Hard Assertion, if TestNG gets an error during @Test, it will throw an AssertException immediately when an assertion fails and stops execution after the assert statement.
+
+Let's understand through an example.
+
+package com.javatpoint;  
+import org.testng.Assert;  
+import org.testng.annotations.Test;  
+import org.testng.asserts.SoftAssert;  
+public class Assertion {  
+SoftAssert soft_assert=new SoftAssert();  
+@Test  
+public void Soft_Assert()  
+{  
+ soft_assert.assertTrue(false);  
+ System.out.println("soft assertion");  
+}  
+@Test  
+public void Hard_Assert()  
+{  
+ Assert.assertTrue(false);  
+ System.out.println("hard assertion");  
+}  
+}  
+
+4) What is the use of @Test(invocationCount=x)?
+
+The invocationcount attribute tells how many times TestNG should run a test method
+@Test(invocationCount = 10)
+public void testCase1(){
+
+
+5) What is the use of @Test(threadPoolSize=x)?
+
+The threadPoolSize attribute tells to form a thread pool to run the test method through multiple threads.
+
+Note: This attribute is ignored if invocationCount is not specified
+
+@Test(threadPoolSize = 3, <code class="plain">invocationCount = </code><code class="value">10</code>) public void testCase1(){
+In this example, the method testCase1 will be invoked from three different threads
+
+6) What does the test timeout mean in TestNG? How to fail a testNG test if it doesn’t get executed within a specified time?
+
+The maximum number of milliseconds a test case should take.
+
+@Test(threadPoolSize = 3, invocationCount = 10,  timeOut = 10000)
+public void testCase1(){
+In this example, the function testCase1 will be invoked ten times from three different threads. Additionally, a time-out of ten seconds guarantees that none of the threads will block on this thread forever.
+
+
+7) What is difference between Suite, Test, and Class?
+
+Suite: A suite is made of one or more tests.
+Test: A test is made of one or more classes.
+Class: A class is made of one or more methods.
+
+
+8) What is the difference between @BeforeClass and @BeforeMethod?
+ There are two main differences between @BeforeClass and @BeforeMethod. They are as follows:
+
+1. The method with @BeforeClass will be executed only once before any of the tests in the current class are run whereas, a method annotated with @BeforeMethod will be executed before each method annotated with @Test.
+
+2. @BeforeClass annotation can be used to set up the configuration and initialization which is common to all test methods in the current class. For example, we can set up driver configuration which will be common for all tests in the class.
+
+@BeforeMethod can be used to set that data which is repeating before each @Test annotated method.
+
+9)How to skip a test in TestNG?
+
+ We can also skip tests on an individual basis by using the “enabled” property available on both @Test and @Before/After annotations. The syntax can be like this:
+Syntax:
+
+@Test(enabled = false)
+@Test(groups = {“Cricket Player”}, enabled=false)
+
+
+10)What is dependency in TestNG?
+
+ When we want to execute multiple test cases in a specific order, then we use the concept of dependency in TestNG. There are two types of dependency attributes used in TestNG. They are:
+
+a. dependsOnMethods: The attribute dependsOnMethods is used to make the test method depend on a particular method. The test method annotated with @Test and attribute dependsOnMethods will run after executing all those methods on which this test method is dependent.
+Syntax:
+
+@Test(dependsOnMethods={“Method1”, “Method2”. . .})
+
+b. dependsOnGroups: This attribute is used to make test methods depend on a particular group. All of the methods of these groups are executed first before this method.
+Syntax:
+
+@Test(dependsOnGroups={“GroupA”, “GroupB”, . . .})
+
+11) How will you execute methods or test cases in TestNG in different order/your order?
+
+
+
+12) Can we overload static methods? 
+The answer is ‘Yes’. We can have two or more static methods with the same name, but differences in input parameters. For example, consider the following Java program. 
+ 
+
+
+// filename Test.java
+public class Test {
+    public static void foo() {
+        System.out.println("Test.foo() called ");
+    }
+    public static void foo(int a) { 
+        System.out.println("Test.foo(int) called ");
+    }
+    public static void main(String args[])
+    { 
+        Test.foo();
+        Test.foo(10);
+    }
+}
+
+12) What is cross-browser testing? Why do you need cross-browser testing?
+ verifies if the web application will work smoothly on different browsers. 
+Some of the popular browsers include Google Chrome, Mozilla Firefox, Internet Explorer, Safari, etc. 
+The goal of the cross-browser testing is to launch the application on various browsers running on 
+different operating systems, e.g. Windows, Mac OS, Linux, etc., and verify that the application works as expected.
+ The tester looks for the design/rendering issues, the functionality of the application, and device-specific functionality.
+
+
+13) Advantages of Cucumber
+
+Here, are some prominent advantages of using Cucumber.
+
+Cucumber is an open-source tool.
+It is helpful to involve business stakeholders who can't easily read the code
+Cucumber Testing enhances the end-user experience
+Style of writing tests allow for easier reuse of code in the tests
+Allows quick and easy setup and execution
+
+
+14) What is the use of Background keyword in Cucumber?
+
+Answer: Background keyword is used to group multiple given statements into a single group. 
+This is generally used when the same set of given statements are repeated in each scenario of the feature file.
+
+15) When is Cucumber used in real-time?
+
+Answer: Cucumber tool is generally used in real-time to write acceptance tests for an application. It is generally 
+used by non-technical people such as Business Analysts, Functional Testers, etc.
+
+
+16) Write a code to wait for a particular element to be visible on a page. Write a code to wait for an alert to appear.
+
+We can write a code such that we specify the XPath of the web element that needs to be visible on the page and then ask 
+the WebDriver to wait for a specified time. Look at the sample piece of code below:
+
+WebDriverWait wait=new WebDriverWait(driver, 20);
+Element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( “<xpath”)));
+Similarly, we can write another piece of code asking the WebDriver to wait until an error appears like this:
+
+
+WebDriverWait wait=new WebDriverWait(driver, 20);
+Element = wait.until(ExpectedConditions.alertIsPresent());
+
+
+17) Can we enter text without using sendKeys()?
+
+Yes. We can enter/ send text without using sendKeys() method. We can do it using JavaScriptExecutor.
+
+How do we do it?
+Using DOM method of, identification of an element, we can go to that particular document and then 
+get the element by its ID (here login) and then send the text by value. Look at the sample code below:
+
+
+		WebElement name=driver.findElement(By.id("username"));
+		((JavascriptExecutor)driver).executeAsyncScript("arguments[0].value='DemosalesManager'",name); 
+
+18) How you handled duplicate Elements in your project?
+
+Using the index property of Elements we handled duplicate objects.
+
+
+19) Difference between NoSuchElementException and StaleElementException with example
+
+
+What is by class in selenium WebDriver?
+Initializes a new instance of the By class using the given functions to find elements. Gets or sets the 
+value of the description for this By class instance. Gets or sets the method used to find a single element 
+matching specified criteria. Gets or sets the method used to find all elements matching specified criteria.
+
+
+Not:
+//div[@class='x-grid3-cell-inner x-grid3-col-partyId']//a[not(contains(text(), '99'))]
+
+Descendant Axis:
+selects children, grandchildren,
+
+//div[@class='x-grid3-cell-inner x-grid3-col-partyId']/descendant::a
+
+normalize-space:
+
+//a[text()[normalize-space() = 'CRM/SFA']] 
+
+//a[//text()[normalize-space() = 'CRM/SFA']] 
+
+//a[normalize-space() = 'CRM/SFA']
+
+//a[normalize-space(text()) = 'CRM/SFA']
+
+//a[contains(text(), 'CRM/SFA')]

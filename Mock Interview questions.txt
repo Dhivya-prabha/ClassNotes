@@ -1,0 +1,34 @@
+1. Tell me abt your self
+2. Resume - questions
+	Project
+	resposibilities
+	team size
+	day to day activities
+	tools used
+
+Rate your self in Java
+	Array - list of numbers
+	{4,3,0,0,3,0} - move all 0 to right
+	
+	String = " i am hari" - Reverse the string and then reverse alternate words
+	Output: hari ma i
+
+Rate your self in Selenium
+
+Give few functions in Xpath 
+what is the exception for syntax error in xpath
+How to handle xpath working in chrome is not working in firefox
+Write syntax for window handling
+How to approach a code working in chome but not in IE
+Give 2 exceptions in recent project and what are the solutions
+Provide few challenges that you faced in selenium automation
+Explain the framework that you are using in your project
+What is the frequency of automation suite execution
+What is the process for automation suite execution
+how can you running daily
+How will you approach if 25% of testcases failed
+How will you approach if 100% of testcases failed
+100 % failed
+What is the reporting tool that you are using and what are the advantages?
+why are you switching the job
+Will you accept better opportunity with same salary?

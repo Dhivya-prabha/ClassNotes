@@ -1,0 +1,14 @@
+1. Tell me about your self
+2. What is your roles and responsibilities in your recent project
+3. How many test cases you automate per day
+4. Explain automation Process 
+5. Rate your self in Selenium
+6. Give few functions in xpath
+7. What is the exception for syntax error in xpath
+8. How do you handle xpath working in chrome but not working in firefox
+9. Difference between implicitly wait and explicitly wait
+10. Which is the execution framework that you used in your project
+11. What is the difference between ignored and skipped status
+12. you have 50 test cases. Want to 20 test cases sequentially and 30 test cases parallely
+13. Give 2 exceptions that you faced in recent project and what are the solutions
+14.Provided 2 challenges that you faced in automation

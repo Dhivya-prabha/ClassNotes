@@ -1,0 +1,50 @@
+
+1) inspect the text SQL in http://www.leafground.com/pages/checkbox.html
+
+(//input[@type="checkbox"]/following-sibling::text())[3]
+
+
+2) How to run a testcase in headless mode?
+
+val chromeOptions = new ChromeOptions
+chromeOptions.addArguments("--headless")
+new ChromeDriver(chromeOptions)
+
+ChromeOptions options = new ChromeOptions();  
+options.setHeadless(true); //Set Chrome option
+driver = new ChromeDriver(options);  
+
+3) How to send values in selenium without using sendkeys?
+
+JavascriptExecutor JS = (JavascriptExecutor)webdriver;
+JS.executeScript("document.getElementById('Pass').value='tester'");
+
+
+   WebElement name= driver.findElement(By.xpath("your xpath");
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+  js.executeAsyncScript("arguments[0].value='admin'",name); 
+
+4) How do you upload a file using Selenium WebDriver?
+To upload a file we can simply use the command element.send_keys(file path). But there is a prerequisite before 
+we upload the file. We have to use the html tag: ‘input’ and attribute type should be ‘file’. 
+
+5) What is Selenium server default port number?
+ 	
+Selenium server default port number is 4444.
+
+6)What is an Object Repository in Selenium?
+An object repository is a centralized storage of locators in the form of objects. QAs store all the element locators in a separate file, also referred to as a property file (.properties) in Selenium. The property file stores information in a key-value pair format. This file serves as an object repository in Selenium WebDriver. 
+
+
+7)All selenium exceptions are runtime exceptions or compile exception?
+	Runtime exceptions
+
+8)Is webdriver is an interface or class?
+
+SearchContext is the super most interface in selenium, which is extended by another interface called WebDriver.
+All the abstract methods of SearchContext and WebDriver interfaces are implemented in RemoteWebDriver class.
+All the browser related classes such as FirefoxDriver, ChromeDriver etc., extends the RemoteWebdriver class.
+
+9)How can you convert a String to an int in Java?
+Integer.parseInt("12",16); 
+Integer.valueOf("12",16);

@@ -1,0 +1,42 @@
+Page Object Model
+*****************
+Page Object Model is a design pattern used in Selenium. The advantage of the model is that it reduces code duplication and improves readability and test maintenance.
+
+PageFactory
+***********
+PageFactory is a class that is provided by Selenium Webdriver.
+The @FindBy annotation used to locate web elements using different locators strategies.
+cache the element once its located and so that it will not be searched over and over again. 
+
+@CacheLookup
+************
+This attribute helps scripts to instruct the InitElements method to cache the element once it's located. In other words, any attribute marked [CacheLookup] will not be searched over and over again – 
+ It is used to mark the WebElements once located so that the same instance in the DOM can always be used.
+
+
+
+
+TestNGListener 
+***************
+ It is an interface that listens to predefined events in test scripts and modifies the default behavior of the TestNG tool. Whether you want to customize reports or generate logs for specific tests, TestNG listeners help you to do so
+
+IAnnotationTransformer
+***********************
+IAnnotationTransformer transforms the TestNG annotations at run time
+
+IAnnotationTransformer is an interface that provides a method “transform” which would get invoked by TestNG to modify the behaviour of Test annotation method in our test class. The transform method provides various parameters: annotation: The annotation that would get read from the test class.
+
+IRetryAnalyzer
+**************
+ IRetryAnalyser, which allows you to rerun a failed test method a set amount of times before declaring it as failed.
+
+ITestListener
+**************
+ By using this TestNG listener in Selenium WebDriver, you can change the default behaviour of your test by adding different events to the methods. It also defines a new way of logging or reporting.
+
+onStart(): invoked after test class is instantiated and before execution of any testNG method.
+onTestSuccess(): invoked on the success of a test
+onTestFailure(): invoked on the failure of a test
+onTestSkipped(): invoked when a test is skipped
+onTestFailedButWithinSuccessPercentage(): invoked whenever a method fails but within the defined success percentage
+onFinish(): invoked after all tests of a class are executedThe above-mentioned methods use the parameters ITestContext and ITestResult. The ITestContext is a class that contains information about the test run. The ITestResult is an interface that defines the result of the test.

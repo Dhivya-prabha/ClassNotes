@@ -1,11 +1,9 @@
 
 BDD (Behavior-driven development) Testing is a technique of agile software development and is as an extension of TDD, i.e., Test Driven Development
 
-BDD – centers around stories that describe the expected behavior of an application. The idea is to describe how the application should behave in a very 
+BDD – helps to describe the expected behavior of an application. The idea is to describe how the application should behave in a very 
 simple user/business-focused language. which means, test cases are written in a natural language that even non-programmers can read.
 
-With BDD-based tests running during your Continuous Integration process, you can give stakeholders fast feedback on whether the functionality is 
-actually implemented and working–in terms that they can easily understand
 
 With BDD, tests are created using the gherkin language.
 
@@ -17,11 +15,18 @@ FitNesse
 Concordion
 SpecFlow
 
+
+Feature - A Feature File is an entry point to the Cucumber tests. keyword is to provide a high-level description of a software feature, and to group related scenarios.
+
 One .feature file can have only one feature
 That suould be written at first
 One feature file can have multiple scenario  
 Each scenario can have multiple steps
 Each keyword can repeat any number of times
+
+Backhground-  it will run before each scenario.
+
+
 
 Step level keywords:
 Given - pre condition

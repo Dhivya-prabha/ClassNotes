@@ -96,3 +96,7 @@ Younger Cousin to Elder Cousin:
 ---------------------------------------------
 Younger cousing xpath/preceding::tagName of the elder
 //label[text()='Password']/preceding
+
+
+
+(//a[@data-label='GPON'])/following::text()

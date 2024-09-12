@@ -24,3 +24,15 @@ Note: To implement multiple interfaces, separate them with a comma (see example 
 Where Interface concept is applied in our real life
 
 With the help of credit card one can purchase or do any transactions in dollars, or pounds or rupees or any other currency. E-commerce giants like Amazon, eBay all accept credit card payment with different currency. Credit card is like an interface that performs several tasks. Credit card does not hold money in a physical form. Then how the shopkeepers or these online e-commerce companies can get the money. Behind the credit card, have our individual bank a/c details from where the actual money is transferred after authentication. The bank a/c is the implementation class and credit card are an interface.
+
+Interface Concept in Selenium
+
+
+For example, to run in Chrome browser Selenium people have developed a class called Chrome Driver. This Chrome Driver class will have all the methods which will help you to automate in chrome browser.
+get (), getCurentUrl(), getTitle(), findElements(), findElement(), quit() and close() are few methods present inside the Chrome Driver, Firefox Driver, Edge Driver and Internet Explorer Driver classes. There are many more methods inside these driver classes.
+To use these methods we create an object of that class. For ex ChromeDriver driver=new ChomeDriver();
+The beauty of Selenium is all these classes will have the same method name,but only inner implementation will change.
+ How do these classes have common method names? Here comes the concept of Interface.
+Have you ever understood why we write the code as WebDriver driver=new ChromeDriver(); instead of ChromeDriver driver=new ChromeDriver();
+ WebDriver is an interface. Classes like Firefox,Chrome,Microsoft edge etc. will follow the rules imposed by WebDriver interface and each class will implement the methods. You can also refer https://www.selenium.dev which is the selenium official website where you will find the WebDriver interface and its implementing classes.
+Hence we write the syntax as WebDriver driver=new ChromeDriver(); driver object has access to the methods of Chrome Driver which are defined in Web Driver interface.

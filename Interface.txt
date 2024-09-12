@@ -20,3 +20,7 @@ achieved with interfaces, because the class can implement multiple interfaces.
 Note: To implement multiple interfaces, separate them with a comma (see example below).
 
  we can provide interface methods to the third-party vendors for their implementation.
+
+Where Interface concept is applied in our real life
+
+With the help of credit card one can purchase or do any transactions in dollars, or pounds or rupees or any other currency. E-commerce giants like Amazon, eBay all accept credit card payment with different currency. Credit card is like an interface that performs several tasks. Credit card does not hold money in a physical form. Then how the shopkeepers or these online e-commerce companies can get the money. Behind the credit card, have our individual bank a/c details from where the actual money is transferred after authentication. The bank a/c is the implementation class and credit card are an interface.

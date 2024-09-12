@@ -1,3 +1,49 @@
+One .feature file can have only one feature
+That suould be written at first
+One feature file can have multiple scenario  
+Each scenario can have multiple steps
+Each step should have a method in java class
+Each keyword can repeat any number of times
+
+Given - pre condition
+When - condition
+Then - Post condition
+And - Join
+But - Negative step 
+
+If same steps are repeating, then we can have the steps in Background - only for that feature file
+(Common steps can be moved to background)
+
+
+
+annotation in feature file and step definition can be change.
+(If u give the step in And and mention the step in @given in step definition it'll not throw an error)
+It's completely based on the steps.
+
+@cucumberoptions
+features = path to the feature file
+Glue = used to mention the package name where the step definition is exist
+monochrome = true to remove the junk characters
+
+
+multiple methods are not allowed for a single step(feature step)
+Method can have multiple steps
+
+
+feature file Steps can be implimented in anywhere of the java class 
+
+Background is applicable for only that feature file. If we create a another feature file with
+ligin we have to write login functionlaity again
+
+
+we can not extend the classes that define step definitions or hooks
+
+
+tags = {"@smoke,@regresion"} - execute the scenario with regression"or" smoke
+tags = {"@smoke","@regresion"} - execute the scenario with regression "and" smoke
+tags = {"~@regresion"} - execute all the scenarios except regression
+
+
 1)What is Cucumber and what are the advantages of Cucumber?
 
 A cucumber is a tool based on Behavior Driven Development (BDD) framework which is used to write acceptance tests for the web application. It allows automation of functional validation in easily readable and understandable format (like plain English) to Business Analysts, Developers, Testers, etc.
@@ -28,10 +74,49 @@ Feature file in cucumber consist of parameters or conditions required for execut
 
 A step definition is the actual code implementation of the feature mentioned in feature file.
 
-For example to make visitor visit the site �Yahoo� the command we use for given
+For example to make visitor visit the site “Yahoo” the command we use for given
  
 Given (/^ I am on www.yahoo.com$/) do
 
-Browser.goto �http://www.yahoo.com�
+Browser.goto “http://www.yahoo.com”
 
-end � This will visit www.yahoo.com
+end – This will visit www.yahoo.com
+
+
+1)What is Cucumber and what are the advantages of Cucumber?
+
+A cucumber is a tool based on Behavior Driven Development (BDD) framework which is used to write acceptance tests for the web application. It allows automation of functional validation in easily readable and understandable format (like plain English) to Business Analysts, Developers, Testers, etc.
+
+Cucumber feature files can serve as a good document for all. 
+
+Advantages of Cucumber:
+
+* You can inolve business stakeholders who can not code
+* End user experience is priority
+* High code reuse
+
+2) What are the 2 files required to execute a Cucumber test scenario?
+
+The 2 files required to execute a Cucumber test scenario are
+
+* Features
+* Step Definition
+
+Feature file in cucumber consist of parameters or conditions required for executing code, they are
+
+* Feature
+* Scenario
+* Scenario Outline
+* Given
+* When
+* Then
+
+A step definition is the actual code implementation of the feature mentioned in feature file.
+
+For example to make visitor visit the site “Yahoo” the command we use for given
+ 
+Given (/^ I am on www.yahoo.com$/) do
+
+Browser.goto “http://www.yahoo.com”
+
+end – This will visit www.yahoo.com

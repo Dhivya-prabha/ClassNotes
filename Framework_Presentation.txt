@@ -1,4 +1,7 @@
-Its a hybrid/customized/integrated framework, which designed based on Page Object Model. It uses selenium to interact with Web application. Testng is used for Test execution. We have used Apache POI to read data from excel to acheive data driven for our tests. Cucumber is itegrated for BDD approach. Extent report is used to generate html report for our test execution.
+Its a hybrid/customized/integrated framework, which designed based on Page Object Model.
+It uses selenium to interact with Web application. Testng is used for Test execution. 
+We have used Apache POI to read data from excel to acheive data driven for our tests. 
+Cucumber is itegrated for BDD approach. Extent report is used to generate html report for our test execution.
 
 Components in Our Framework:
  - 2 Interfaces to design the method for Browser and Element

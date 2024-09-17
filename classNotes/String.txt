@@ -110,6 +110,12 @@ A specific element in an array is accessed by its index.
 if we does not give any value to some index it'll alocate 0 to that index
 
 String[] myArray  = new String[] { "Hello", "World" };
+int[] myArray;
+myArray = new int[]{0, 1, 2, 3};
+int[] myArray = {0, 1, 2, 3};
+int myArray[] = {0, 1, 2, 3};
+int myArray[] = new int[4];
+
 
 String[] str = {"Red","Blue","Black","White"}
 	for (int i = 0; i < abc.length; i++) {

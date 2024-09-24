@@ -11,3 +11,28 @@ Security testing: Security testing is a type of software testing that uncovers t
 Acceptance testing: Acceptance testing is the last phase of software testing that is performed after the system testing. It helps to determine to what degree the application meets end users’ approval.
 API testing: API testing is a type of software testing that validates the Application Programming Interface(API) and checks the functionality, security, and reliability of the programming interface.
 UI Testing: UI testing is a type of software testing that helps testers ensure that all the fields, buttons, and other items on the screen function as desired.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

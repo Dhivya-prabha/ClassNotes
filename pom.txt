@@ -1,3 +1,19 @@
+Rules:
+=======
+Every Screen -> Single Java class
+Every Field -> Single Method
+Every Fields behaviour -> Single Method
+Every Method should return its landing Page
+
+
+
+
+
+
+
+
+
+
 Test Framework is software, which will enable us to run our tests as needed. There are two most common frameworks:
 
 JUnit

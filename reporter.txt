@@ -21,6 +21,11 @@ in our project.
 
 ExtentReport:
 
+     ExtentReports extend = new ExtentReports();
+	ExtentSparkReporter spark = new ExtentSparkReporter("./reports/index.html");
+	extent.AttachReporter(spark);
+Code to add extent report in Framework
+
 It is one of a framework. And this is for reporting Framework like a testNG.
 But TestNG is onlt for execution purpose. Like that it is a separate frame work
 

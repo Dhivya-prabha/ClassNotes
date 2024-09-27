@@ -1,4 +1,4 @@
-How does Selenium Webdriver handle SSL certificate in Chrome?
+1. How does Selenium Webdriver handle SSL certificate in Chrome?
 For the Chrome browser, one can handle the SSL certificates using ChromeOptions class provided by Selenium WebDriver. It is a class that we can use to set properties for the Chrome browser. Let us now see what additions we will make to the existing code, and then we will understand the same.
 
 import org.openqa.selenium.WebDriver;
@@ -10,10 +10,10 @@ public class SSLHandling {
 	public static void main(String[] args) {
 
 		//Create instance of ChromeOptions Class
-		ChromeOptions handlingSSL = new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
 
 		//Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-		handlingSSL.setAcceptInsecureCerts(true);
+		options.setAcceptInsecureCerts(true);
 				
 		//Creating instance of Chrome driver by passing reference of ChromeOptions object
 		WebDriver driver = new ChromeDriver(handlingSSL);
@@ -26,8 +26,9 @@ public class SSLHandling {
 
 }
 
-
-Screenshot in selenium
+2. Screenshot in selenium
 
 File screenshot = driver.getScreenshotAs(OutputType.FILE);
  FileUtils.copyFile(screenshot, new File("./snap.jpg")
+
+3.  

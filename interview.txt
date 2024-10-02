@@ -48,3 +48,87 @@ All the browser related classes such as FirefoxDriver, ChromeDriver etc., extend
 9)How can you convert a String to an int in Java?
 Integer.parseInt("12",16); 
 Integer.valueOf("12",16);
+
+10)Difference between Action and Actions in Selenium
+
+In Selenium WebDriver, Action and Actions are two different classes that deal with performing complex user interactions like mouse movements, drag-and-drop, clicking multiple elements, etc. Here’s an explanation of both:
+
+1. Actions Class
+The Actions class is used to build a series of complex actions like mouse and keyboard interactions. It provides methods to handle multiple user interactions such as double-click, right-click, drag-and-drop, and more. The Actions class is part of the org.openqa.selenium.interactions package.
+
+Key Features of the Actions Class:
+Allows building composite actions like a series of actions to be performed in sequence.
+It provides methods for mouse actions (e.g., click(), doubleClick(), moveToElement()) and keyboard actions (e.g., sendKeys()).
+Used to create an action chain that can be executed by calling perform() at the end of the action chain.
+Common Methods in the Actions Class:
+click()
+doubleClick()
+contextClick() (right-click)
+dragAndDrop()
+moveToElement()
+sendKeys()
+
+Actions actions = new Actions(driver);
+actions.moveToElement(element).click().perform();
+
+
+In Selenium WebDriver, Action and Actions are two different classes that deal with performing complex user interactions like mouse movements, drag-and-drop, clicking multiple elements, etc. Here’s an explanation of both:
+
+1. Actions Class
+The Actions class is used to build a series of complex actions like mouse and keyboard interactions. It provides methods to handle multiple user interactions such as double-click, right-click, drag-and-drop, and more. The Actions class is part of the org.openqa.selenium.interactions package.
+
+Key Features of the Actions Class:
+Allows building composite actions like a series of actions to be performed in sequence.
+It provides methods for mouse actions (e.g., click(), doubleClick(), moveToElement()) and keyboard actions (e.g., sendKeys()).
+Used to create an action chain that can be executed by calling perform() at the end of the action chain.
+Common Methods in the Actions Class:
+click()
+doubleClick()
+contextClick() (right-click)
+dragAndDrop()
+moveToElement()
+sendKeys()
+Example of Actions Class:
+java
+Copy code
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class ActionsExample {
+    public static void main(String[] args) {
+        // Set up WebDriver
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+
+        // Navigate to a webpage
+        driver.get("https://example.com");
+
+        // Locate an element
+        WebElement element = driver.findElement(By.id("elementId"));
+
+        // Create an instance of the Actions class
+        Actions actions = new Actions(driver);
+
+        // Perform a series of actions - move to the element and click it
+        actions.moveToElement(element).click().perform();
+
+        // Close the driver
+        driver.quit();
+    }
+}
+In the example above, we create an Actions object and use moveToElement() to hover over an element, followed by a click(), and then call perform() to execute the action sequence.
+
+Action Interface
+The Action interface represents a single user interaction, such as clicking, sending keys, or moving the mouse. When you build a chain of actions using the Actions class, you can create an Action object and then execute it using the perform() method.
+
+Key Points about Action:
+Action is an interface that represents one interaction action like click(), dragAndDrop(), etc.
+You don’t create an Action directly. Instead, it is typically created as part of the Actions class’s build() method.
+An Action is usually a single operation that you can execute, as opposed to multiple actions being chained together.
+
+Actions actions = new Actions(driver);
+Action action = actions.moveToElement(element).click().build();
+Action.perform();

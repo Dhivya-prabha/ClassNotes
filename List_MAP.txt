@@ -1,0 +1,76 @@
+
+List 
+*****
+
+
+Methods provided by List Interface
+boolean addAll( listobj ) : It inserts all the elements in the parameter to the end of the list.
+
+boolean add() : Appends the element to the end of the list.
+
+boolean equals(obj) : It compares the content of two lists.
+
+E get(int index) : Returns the element at a particular index.
+
+int lastIndexOf(obj) : Returns the last index of a repeating element “obj”.
+
+E remove(int index) : It removes the element which is stored at a particular index.
+
+set(int index, element) : It inserts the element to the specified index in the list.
+
+int size() : The number of elements present in the list will be returned.
+
+1. ArrayList:
+Java ArrayList class uses a dynamic array for storing the elements. It is like an array, but there is no size limit. We can add or remove elements anytime
+Package: java.util
+Description: The ArrayList class is a resizable array implementation of the List interface. It allows fast random access to elements, but inserting or removing elements from the middle of the list can be slow because elements need to be shifted.
+When to Use: When frequent reads or access by index is needed, and occasional inserts or deletes.
+
+List<String> list = new ArrayList<>();
+
+2. LinkedList
+Package: java.util
+Description: The LinkedList class implements a doubly linked list. It allows fast insertion and removal of elements from both ends (head or tail) but is slower than ArrayList for accessing elements by index.
+When to Use: When frequent insertions or deletions (especially at the beginning or end) are needed, and random access isn't a priority.
+
+List<String> linkedList = new LinkedList<>();
+
+MAP:
+****
+
+1. HashMap
+Package: java.util
+Description: The HashMap class implements the Map interface using a hash table. It allows null values and null keys. It does not maintain any specific order for the entries.
+When to Use: When you need fast lookups, inserts, and deletes based on keys, and order is not important.
+
+Map<String, Integer> hashMap = new HashMap<>();
+
+2. LinkedHashMap
+Package: java.util
+Description: The LinkedHashMap class extends HashMap and maintains a linked list of the entries in the map, thus preserving the insertion order.
+When to Use: When you need a map with predictable iteration order (e.g., to preserve insertion order).
+
+Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+
+3. TreeMap
+Package: java.util
+Description: The TreeMap class implements the Map interface using a red-black tree. It sorts the keys based on their natural ordering or a custom Comparator provided at map creation.
+When to Use: When you need the entries sorted by their keys.
+
+Map<String, Integer> treeMap = new TreeMap<>();
+
+4. Hashtable
+Package: java.util
+Description: The Hashtable class is similar to HashMap, but it is synchronized and thread-safe. However, it does not allow null keys or null values.
+When to Use: When you need a thread-safe map, but ConcurrentHashMap (see below) is generally a better choice.
+
+Map<String, Integer> hashtable = new Hashtable<>();
+
+HashMap: Best for general-purpose usage where thread-safety and ordering are not needed.
+LinkedHashMap: Use when you need insertion order.
+TreeMap: Use when sorted order is required.
+Hashtable: Use for thread-safe operations, though ConcurrentHashMap is generally preferred.
+ConcurrentHashMap: Best for thread-safe, high-performance concurrent access.
+WeakHashMap: Use when automatic garbage collection of keys is needed.
+EnumMap: Best when using enums as keys for efficient mapping.
+IdentityHashMap: For reference-based key comparison.

@@ -1,0 +1,138 @@
+
+Agile Methodology is a modern, iterative approach to software development and project management that emphasizes flexibility, collaboration, and delivering value to customers quickly. It prioritizes individuals and interactions over processes and tools, working software over comprehensive documentation, customer collaboration over contract negotiation, and responding to change over following a rigid plan.
+
+Agile was formalized with the Agile Manifesto in 2001, which defined its core values and principles. It has since become a widely adopted methodology in software development and beyond.
+
+Key Characteristics of Agile Methodology:
+Iterative Development:
+
+Work is divided into small, manageable increments called sprints or iterations, usually lasting 1-4 weeks.
+Each sprint delivers a working, potentially shippable product.
+Customer Collaboration:
+
+Close collaboration with stakeholders ensures the product meets evolving requirements.
+Frequent feedback helps align the product with business needs.
+Emphasis on Working Software:
+
+Focus on delivering functional software frequently (e.g., at the end of each sprint).
+Flexibility:
+
+Agile welcomes changing requirements, even late in the development process.
+Teams adapt plans based on feedback and changing priorities.
+Team Empowerment:
+
+Self-organizing, cross-functional teams are empowered to make decisions.
+Communication is key, often achieved through daily stand-ups.
+Agile Frameworks
+Agile is an umbrella term that includes various frameworks, such as:
+
+Scrum:
+
+A lightweight framework with fixed-length sprints, daily stand-ups, and defined roles like Scrum Master, Product Owner, and Development Team.
+Kanban:
+
+Focuses on visualizing work, limiting work in progress, and optimizing flow through a board (e.g., To-Do, In Progress, Done).
+Extreme Programming (XP):
+
+Focuses on engineering practices like test-driven development (TDD), pair programming, and continuous integration.
+Lean:
+
+Emphasizes minimizing waste, delivering value quickly, and continuous improvement.
+SAFe (Scaled Agile Framework):
+
+Designed for large enterprises to implement Agile across multiple teams.
+Agile Workflow
+A typical Agile workflow might look like this:
+
+Concept and Planning:
+
+Collaborate with stakeholders to define the high-level product vision and create a prioritized product backlog (list of tasks).
+Sprint Planning:
+
+Teams select a set of backlog items (user stories) to complete in a sprint.
+Execution:
+
+The team develops, tests, and integrates the product increment during the sprint.
+Daily Stand-Ups:
+
+Short meetings where team members discuss progress, blockers, and plans for the day.
+Sprint Review:
+
+The team demonstrates the completed work to stakeholders for feedback.
+Sprint Retrospective:
+
+Reflect on what went well and identify areas for improvement.
+Repeat:
+
+Plan the next sprint and iterate.
+
+
+
+
+Types of Testing:
+***** ** ********
+
+1. Functional Testing
+Focuses on validating the functional requirements of the application.
+
+Unit Testing: Tests individual components or units of code (e.g., methods or functions).
+Integration Testing: Ensures that different modules or components of the application work together.
+System Testing: Tests the application as a whole, ensuring it meets the specified requirements.
+User Acceptance Testing (UAT): Performed by end-users to verify the application meets their needs and is ready for deployment.
+Smoke Testing: A quick check to ensure the basic functionalities work after a new build or deployment.
+Sanity Testing: Verifies specific functionalities after changes to ensure they're working as expected.
+2. Non-Functional Testing
+Evaluates the performance, usability, reliability, and other non-functional aspects of the system.
+
+Performance Testing: Checks the application's speed, responsiveness, and stability under different conditions.
+Subtypes: Load Testing, Stress Testing, Spike Testing, Endurance Testing, and Scalability Testing.
+Security Testing: Identifies vulnerabilities in the application and ensures data protection.
+Usability Testing: Evaluates how user-friendly and intuitive the application is.
+Compatibility Testing: Ensures the application works on different devices, browsers, OS, and networks.
+Reliability Testing: Verifies the application's ability to function without failure over time.
+Compliance Testing: Checks adherence to industry standards, regulations, and policies.
+Localization Testing: Ensures the application is adapted to a specific locale, culture, or region.
+Accessibility Testing: Ensures the application is usable by people with disabilities, adhering to standards like WCAG.
+3. Black-Box Testing
+Focuses on testing the application without knowledge of its internal structure or code.
+Examples: Functional Testing, System Testing, UAT.
+4. White-Box Testing
+Involves testing the internal logic and structure of the code.
+Examples: Unit Testing, Integration Testing, Code Coverage Testing.
+5. Gray-Box Testing
+Combines aspects of both black-box and white-box testing, where testers have partial knowledge of the internal workings.
+6. Automation Testing
+Uses tools to execute test cases, reducing manual effort and improving efficiency.
+
+Common tools: Selenium, Appium, JUnit, TestNG, Cypress, etc.
+Types: Regression Testing, Load Testing, Functional Testing, and Performance Testing.
+7. Regression Testing
+Ensures that new code changes do not adversely affect the existing functionality of the application.
+
+8. Exploratory Testing
+Performed without predefined test cases to discover bugs through exploratory scenarios.
+
+9. Ad-Hoc Testing
+Informal testing conducted without a structured plan to find unexpected bugs.
+
+10. Alpha and Beta Testing
+Alpha Testing: Conducted by internal teams in a controlled environment before releasing the product to users.
+Beta Testing: Performed by external users in a real-world environment to gather feedback before full-scale release.
+11. Recovery Testing
+Tests the application's ability to recover from crashes, failures, or disruptions.
+
+12. End-to-End Testing
+Tests the complete flow of an application, from start to finish, including integration with external systems.
+
+13. Maintenance Testing
+Done after deployment to ensure changes, updates, or fixes do not introduce new bugs.
+
+14. Mobile Testing
+Focuses on testing applications on mobile devices.
+
+Subtypes: Functional, Usability, Compatibility, Performance, and Security Testing.
+15. API Testing
+Validates APIs for functionality, reliability, performance, and security.
+
+16. Database Testing
+Ensures the integrity of data in the database and verifies CRUD (Create, Read, Update, Delete) operations.

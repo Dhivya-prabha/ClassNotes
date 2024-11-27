@@ -108,10 +108,17 @@ public class Test_cases
 
 
 3) What is the difference between soft assertion and hard assertion?
+
+What is Hard Assert?
 Soft Assertion: In case of Soft Assertion, if TestNG gets an error during @Test, it will throw an exception when an assertion fails and continues with the next statement after the assert statement.
+To overcome the above-mentioned problem, there is another type of assertion called Soft Assert.
+Soft Assert does not throw an exception when an Assert Condition fails, and continues with the next step after the Assert Condition.
 
 Hard Assertion: In the case of Hard Assertion, if TestNG gets an error during @Test, it will throw an AssertException immediately when an assertion fails and stops execution after the assert statement.
+Hard Assertion throws AssertionError immediately when an Assert Condition fails and moves to the next @Test method
+Suppose, there are 2 assertions in a Test and the first assertion fails, then HardAssertion does not execute the second Assertion Condition and declares the test as failed
 
+https://qaautomation.expert/2023/11/05/hard-assert-and-soft-assert-in-testng/
 Let's understand through an example.
 
 package com.javatpoint;  

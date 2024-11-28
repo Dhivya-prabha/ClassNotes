@@ -41,5 +41,10 @@ Multi lingual Application--> will be having locators in the properties files
 
 indices= {0} ---> It'll restric to fetch only one set of data from excel. Should be given in @dataprovider annnotation
 
-
+The differences between the Page Factory and Page Object are listed below −
+*** *********** ******* *** **** ******* *** **** ****** *** ****** *****
+In Page Factory, the elements are identified by @FindBy, where in Page Object Model, the elements are identified using the By.
+Page Factory has the concept of lazy initialization which is absent in Page Object Model.
+Page Object Model is a design pattern while the Page Factory is a class available in the Webdriver class which helps to implement the Page Object Model.
+In Page Object Model, every object has to be initialized separately, while in the Page Factory, the initElement() method initializes all objects at once.
 

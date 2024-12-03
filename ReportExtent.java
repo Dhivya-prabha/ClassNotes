@@ -19,12 +19,11 @@ public class ReportExtent {
 	    @BeforeClass
 	    public void setup() {
 	        // Initialize the HtmlReporter
-	        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extentReport.html");
+	        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./extentReport.html");
 	        
 	        // Attach the HtmlReporter to ExtentReports
 	        extent = new ExtentReports();
 	        extent.attachReporter(htmlReporter);
-
 	        // Initialize WebDriver
 	     
 	         driver = new ChromeDriver();
@@ -37,6 +36,8 @@ public class ReportExtent {
 
 	        driver.get("https://www.google.com");
 	        String title = driver.getTitle();
+	        test.assignAuthor("Dhivya Prabha");
+	        test.assignCategory("Smoke Test");
 
 	        // Log test steps and results
 	        if (title.equals("Google")) {

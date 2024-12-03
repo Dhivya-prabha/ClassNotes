@@ -1,0 +1,80 @@
+Hybrid Framework:
+======================
+	This framework is designed based on Page Object Model. 
+We used Selenium to interact with Web application, TestNg is used for test execution.
+Apache POI to read the data from excel to support multiple data testing. 
+Cucumber is used to support the BDD approach and Extent report is used to get
+a html automation summary report.
+
+
+What are the components:
+=====================
+1. Browser and Element interfaces to design this framework
+
+Browser interface contains all browser related methods like, 
+
+startApp(String url, boolean headless);
+locateElement(Locators locatorType, String value);
+locateElements(Locators locatorType, String value);	
+switchToAlert();
+acceptAlert();
+switchToWindow(String title);
+switchToFrame(String idOrName);
+verifyTitle(String title)
+verifyUrl(String url
+
+
+Element interface contains all element related methods like, 
+
+click(WebElement ele);
+append(WebElement ele, String data); 
+clear(WebElement ele);
+clearAndType(WebElement ele,String data)
+electDropDownUsingIndex(WebElement ele, int index) ;
+selectDropDownUsingText(WebElement ele, String value) ;
+selectDropDownUsingIndex(WebElement ele, int index) ;
+verifyDisappeared(WebElement ele);
+verifyExactText(WebElement ele, String expectedText);
+verifyPartialText(WebElement ele, String expectedText);
+verifyExactAttribute(WebElement ele, String attribute, String value);
+
+
+
+2. SeleniumBase is the library for the Wrapper methods which implemented from Browser and element interfaces
+
+we have a method for locating element which is overridden from browser interface is written to avoid the repeated code writing for driver.findelement(By)
+we get the locator type and value as an argument and return the corresponding locator code in switch case block
+ if the case is xpath it will return driver().findElement(By.xpath(value));
+And additionally we added proper waits, try catch block for error management and descriptions for pass and failed  steps for report generation 
+
+3. ProjectSpecificMethods as Base class for pages and testcases which extends SeleniumBase 
+contains dataprovider, pre and post conditions
+the data provider will run initially before the testcase execution so it is defined here 
+in pre condtions we have to set the browser type and the application url in post condition the method close browser will be there
+
+
+4. pages package to have the classes for each page
+each class contains methods for every actions. Here we dont define a variable like 
+
+ private By usernameBy = By.name("user_name");
+indtead we use locateElement method which is in selenium wrapper class to locate the element with locater and value
+
+clearAndType(locateElement("xpath", "xpath value"), data);
+
+here, each method should return the same page or corresponded landing page
+
+5. Testcases package to have the classes for each test case
+
+6. Utils package to have the classes related to external applications
+	DataLibrary(to read data from excel)
+	Reporter(Configuration for ExtentReport)
+	in extent report we use ExtentHtmlReporter class to create a html file and we use ExtentReports class to attach the reports to html file
+
+we start a test with extent.createTest method
+and we can give autor name with test.assignAuthor method also we can give test category like smoke or sanity in  test.assignCategory method
+
+also we have attached a screen shot for each pass and failed steps along with the description from selenium base class
+
+finally extent.flush writes all the test log information (pass/fail/skipped statuses, screenshots, etc.) to the report file.
+
+ 

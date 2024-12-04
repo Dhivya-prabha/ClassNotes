@@ -77,4 +77,38 @@ also we have attached a screen shot for each pass and failed steps along with th
 
 finally extent.flush writes all the test log information (pass/fail/skipped statuses, screenshots, etc.) to the report file.
 
+Apart from this we pass the data to applications in various ways
+
+first one is passing values as a parameter from xml file to methods
+to accomplish this we have to pass the value via parameter tag from xml like <parameter name = 'username' value = 'Dhivya'
+></parameter like this ]  and in the method we can receive this data by using @parameters attribute. to get it we have to define the @parameter attribute above the  @bforemethod and we can pass the data via the method as an argument.
+
+Second one is to pass the data via Excel file.
+for this we have to  write a method to read the data from excel and return the data as a 2 dimensional object array because based on row and column we are returning it as 2 dimensional array and we send an excel name from each page class in @before test attribute and this method is defined in base class under @DataProvider attribute. We have to call and execute read excel method from based class because it need to execute before each class execution. We can set some limitation in data fetching with the attribute indices.
+
+Third one is, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  

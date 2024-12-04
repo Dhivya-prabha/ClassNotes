@@ -11,6 +11,12 @@ Text Based Xpath:
 //tagName[text()='textValue']
 //label[text()='Username']
 
+normalize-space:
+----------------
+//a[normalize-space(text())='CRM/SFA']
+//label[text()[normalize-space() = 'some label']]
+//a[normalize-space(@id)=’someAnchor’]
+
 Multiple Attributes:
 --------------------------
 //tagName[@attribute1='attributevalue'][@attribute2='attributeVale']

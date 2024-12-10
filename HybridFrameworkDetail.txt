@@ -30,14 +30,12 @@ click(WebElement ele);
 append(WebElement ele, String data); 
 clear(WebElement ele);
 clearAndType(WebElement ele,String data)
-electDropDownUsingIndex(WebElement ele, int index) ;
 selectDropDownUsingText(WebElement ele, String value) ;
 selectDropDownUsingIndex(WebElement ele, int index) ;
 verifyDisappeared(WebElement ele);
 verifyExactText(WebElement ele, String expectedText);
 verifyPartialText(WebElement ele, String expectedText);
 verifyExactAttribute(WebElement ele, String attribute, String value);
-
 
 
 2. SeleniumBase is the library for the Wrapper methods which implemented from Browser and element interfaces
@@ -70,10 +68,10 @@ here, each method should return the same page or corresponded landing page
 	Reporter(Configuration for ExtentReport)
 	in extent report we use ExtentHtmlReporter class to create a html file and we use ExtentReports class to attach the reports to html file
 
-we start a test with extent.createTest method
-and we can give autor name with test.assignAuthor method also we can give test category like smoke or sanity in  test.assignCategory method
-
-also we have attached a screen shot for each pass and failed steps along with the description from selenium base class
+and we define testCaseName, testDescription, nodes, authors, Test category in reporter class as public string variables and we set the values for these in each testcase under @BeforeTest. 
+Also we have a method for ScreenCapture which is attached to each step of testcase for both pass and failed status. And captured images are saved in the name of current date and time.
+ 
+So each step will have a screen shot for each pass and failed steps along with the description in html report                                                   
 
 finally extent.flush writes all the test log information (pass/fail/skipped statuses, screenshots, etc.) to the report file.
 
@@ -88,27 +86,21 @@ for this we have to  write a method to read the data from excel and return the d
 
 Third one is, 
 
+to get the data from properties file. We have data in properties in Key, value format. By creating an object for Java inbuild class Properties we can access the properties file. to do that we have to get the file with load method. then we can get the value from the properties with property.getProperty() method.
 
 
+Hirerarchy of Execution / Execution flow:
+@BeforeSuit - (here it'll execute the reporter class start and create a report file from reporter class)
+@BeforeTest - (In each  testcase, we set a test case description, author, test category and excel sheet name in setValues method)
+@BeforeClass -   (it'll execute the report methods which assign the values to test, from setValues method) test = extent.createTest(testCaseName, testDescription);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@DataProvider() - It'll execute the dataprovider from ProjectSpecificMethod
  
+@BeforeMethod() - It'll execute the StartApp method to start the Application From ProjectSpecificMethod
+@Test() - then it'll execute the @test method and testcase execution
+                                                                            
+@BeforeMethod - It'll close the application once the @test is over and it's available in ProjectSpecificMethod
+@AfterClass -  there no @afterclass in our framework
+@AfterTest - there no @afterclass in our framework
+@AfterSuit - available in reporter class and it execute StopReport method() which has the extend.flush methods to attach all the data to html report
+ 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

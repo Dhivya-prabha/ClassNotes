@@ -36,3 +36,94 @@ The beauty of Selenium is all these classes will have the same method name,but o
 Have you ever understood why we write the code as WebDriver driver=new ChromeDriver(); instead of ChromeDriver driver=new ChromeDriver();
  WebDriver is an interface. Classes like Firefox,Chrome,Microsoft edge etc. will follow the rules imposed by WebDriver interface and each class will implement the methods. You can also refer https://www.selenium.dev which is the selenium official website where you will find the WebDriver interface and its implementing classes.
 Hence we write the syntax as WebDriver driver=new ChromeDriver(); driver object has access to the methods of Chrome Driver which are defined in Web Driver interface.
+In Java, an interface is a reference type that defines a collection of abstract methods (methods without implementation) that a class can implement. It is a way to achieve abstraction and multiple inheritance in Java. Interfaces are particularly useful for defining a contract or a set of rules that implementing classes must follow.
+
+Key Features of Interfaces:
+
+1. Abstract Methods: An interface can contain abstract methods, which are methods declared without a body.
+
+
+2. Default and Static Methods (Java 8+): Interfaces can include default and static methods with concrete implementations.
+
+
+3. No Instance Variables: Interfaces can only contain constants (i.e., public static final variables).
+
+
+4. Multiple Implementation: A class can implement multiple interfaces, overcoming the limitation of single inheritance in Java.
+
+
+
+Syntax:
+
+// Interface definition
+public interface MyInterface {
+    // Abstract method
+    void abstractMethod();
+
+    // Default method (Java 8+)
+    default void defaultMethod() {
+        System.out.println("This is a default method.");
+    }
+
+    // Static method (Java 8+)
+    static void staticMethod() {
+        System.out.println("This is a static method.");
+    }
+
+    // Constant
+    int CONSTANT = 100; // public static final is implied
+}
+
+// Class implementing the interface
+public class MyClass implements MyInterface {
+    // Implementing the abstract method
+    @Override
+    public void abstractMethod() {
+        System.out.println("Abstract method implemented.");
+    }
+}
+
+// Main class to demonstrate interface usage
+public class Main {
+    public static void main(String[] args) {
+        MyInterface obj = new MyClass();
+        obj.abstractMethod();
+        obj.defaultMethod();
+        MyInterface.staticMethod(); // Call static method directly from interface
+    }
+}
+
+Key Points:
+
+1. Access Modifiers: All methods in an interface are public and abstract by default. Variables are public, static, and final by default.
+
+
+2. Implementation: A class must provide implementations for all abstract methods of the interface it implements.
+
+
+3. Inheritance: Interfaces can extend other interfaces.
+
+
+
+Example of Multiple Interfaces:
+
+interface InterfaceA {
+    void methodA();
+}
+
+interface InterfaceB {
+    void methodB();
+}
+
+public class MultiInterfaceClass implements InterfaceA, InterfaceB {
+    @Override
+    public void methodA() {
+        System.out.println("MethodA from InterfaceA");
+    }
+
+    @Override
+    public void methodB() {
+        System.out.println("MethodB from InterfaceB");
+    }
+}
+

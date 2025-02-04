@@ -1,0 +1,46 @@
+Read PDF content using Selenium
+
+
+Download the jar file from the below path:
+https://pdfbox.apache.org/download.html
+I am using the jar version of PDFbox 1.8.16.
+Go to the project and select “Configure Build Path” and add the external jar file.
+After adding the jar, click on the “apply” and “close” buttons.
+
+
+
+package Testing;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.URL;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.util.PDFTextStripper;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class pdfread {
+
+public static WebDriver driver;
+
+public void ReadPDF() throws Exception {
+WebDriverManager.chromedriver().setup();
+driver = new ChromeDriver();
+driver.manage().window().maximize();
+driver.get("https://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf");
+String Currentlink=driver.getCurrentUrl();
+URL URL = new URL(Currentlink);
+InputStream Inputfile = URL.openStream();
+BufferedInputStream file =new BufferedInputStream(Inputfile);
+PDDocument document = PDDocument.load(file);
+String pdfContent= new PDFTextStripper().getText(document);
+System.out.println(pdfContent);
+}
+
+public static void main(String[] args) throws Exception {
+
+pdfread read = new pdfread();
+read.ReadPDF();
+driver.quit();
+}
+}

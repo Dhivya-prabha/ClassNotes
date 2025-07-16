@@ -102,6 +102,42 @@ String str1 = "Java programming";
 	System.out.println(text1.replaceAll("[^0-9]", ""));
 
 	System.out.println(text1.replaceAll("[0-9]", ""));
+public static void main(String[] args) {
+		String s = "12345678";
+		if (s.matches("\\d+")) {
+			System.out.println("all are digits");
+		} else
+			System.out.println("Not all are digits");
+
+		// Validate Email Address
+
+		String email = "test@email.com";
+		String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+		if (email.matches(regex)) {
+			System.out.println("Email is validated");
+		} else
+			System.out.println("Not a validate email");
+		
+		//Replace all Special characters
+		
+		String str = "Hello@20&2#5";
+		String after = str.replaceAll("[^A-Za-z0-9]", "");
+		System.out.println(after);
+		
+		//Replace all Spaces
+		
+		String val = "Java      is     Fun";
+		String clean = val.replaceAll("\\s+", "");
+		System.out.println(clean);
+		
+		String text = "12Dhivya567Prabha78";
+		String replaceChar = text.replaceAll("[^0-9]", "");//anything not a number
+		String replaceChar1 = text.replaceAll("[0-9]", "");//removes number
+		System.out.println(replaceChar);
+
+		System.out.println(replaceChar1);
+
+	}
 
 ********************************************************************************************
 More than one data in a single variable is called as array

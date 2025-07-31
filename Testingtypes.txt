@@ -2,25 +2,34 @@ Automation Testing Types:
 ********** ******* ******
 Below are the different types of automation testing:
 
-Unit testing: Unit testing is a phase in software testing to test the smallest piece of code known as a unit that can be logically isolated from the code. It is carried out during the development of the application.
+Unit testing: Unit testing is a phase in software testing to test the smallest piece of code 
+known as a unit that can be logically isolated from the code. It is carried out during the development of the application.
 
+Integration testing: Integration testing is a phase in software testing in which individual software 
+components are combined and tested as a group. It is carried out to check the compatibility of the component with the specified 
+functional requirements.
 
-Integration testing: Integration testing is a phase in software testing in which individual software components are combined and tested as a group. It is carried out to check the compatibility of the component with the specified functional requirements.
+Smoke testing: Smoke testing is a type of software testing that determines whether the built software is
+stable or not. It is the preliminary check of the software before its release in the market.
 
+Performance testing: Performance testing is a type of software testing that is carried out to 
+determine how the system performs in terms of stability and responsiveness under a particular load.
 
-Smoke testing: Smoke testing is a type of software testing that determines whether the built software is stable or not. It is the preliminary check of the software before its release in the market.
+Regression testing: Regression testing is a type of software testing that confirms that previously developed software still works
+fine after the change and that the change has not adversely affected existing features.
 
-Performance testing: Performance testing is a type of software testing that is carried out to determine how the system performs in terms of stability and responsiveness under a particular load.
+Security testing: Security testing is a type of software testing that uncovers the risks, and vulnerabilities
+in the security mechanism of the software application. It helps an organization to identify the loopholes 
+in the security mechanism and take corrective measures to rectify the security gaps.
 
-Regression testing: Regression testing is a type of software testing that confirms that previously developed software still works fine after the change and that the change has not adversely affected existing features.
+Acceptance testing: Acceptance testing is the last phase of software testing that is performed after the 
+system testing. It helps to determine to what degree the application meets end users’ approval.
 
-Security testing: Security testing is a type of software testing that uncovers the risks, and vulnerabilities in the security mechanism of the software application. It helps an organization to identify the loopholes in the security mechanism and take corrective measures to rectify the security gaps.
+API testing: API testing is a type of software testing that validates the Application Programming Interface(API)
+and checks the functionality, security, and reliability of the programming interface.
 
-Acceptance testing: Acceptance testing is the last phase of software testing that is performed after the system testing. It helps to determine to what degree the application meets end users’ approval.
-
-API testing: API testing is a type of software testing that validates the Application Programming Interface(API) and checks the functionality, security, and reliability of the programming interface.
-
-UI Testing: UI testing is a type of software testing that helps testers ensure that all the fields, buttons, and other items on the screen function as desired.
+UI Testing: UI testing is a type of software testing that helps testers ensure that all the fields, buttons, 
+and other items on the screen function as desired.
 
 
 

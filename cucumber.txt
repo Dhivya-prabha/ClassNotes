@@ -39,6 +39,21 @@ If same steps are repeating, then we can have the steps in Background - only for
 (Common steps can be moved to background)
 
 
+	@Given("Enter username as (.*)$")
+	//If we use same step definition for more than one step from feature file, we have to pass 
+	  the arguments as (.*)$ because passing data during run time will accept only this format
+ 
+@Given("Enter Username as {string}")	
+If we passing data nomally or the step is not used for more than one step from feature file we can
+define like this.
+
+Background:
+When Load URL 'http://leaftaps.com/opentaps/control/login'
+If we pass the value from feature file directly, we can define like this
+@When("Load URL {string}")
+
+If we are passing Integer value we have drfine like, 
+@Given("Enter the Phone Number as {int}")
 
 annotation in feature file and step definition can be change.
 (If u give the step in And and mention the step in @given in step definition it'll not throw an error)
@@ -75,3 +90,4 @@ cucumber can not be run in parallel because of implimentation
 
 parallel run in cucumber can be achived by(only have example data will be run in parallel)
 runner class->dataprovider='true'
+

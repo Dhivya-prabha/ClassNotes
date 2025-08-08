@@ -39,9 +39,11 @@ If same steps are repeating, then we can have the steps in Background - only for
 (Common steps can be moved to background)
 
 
-	@Given("Enter username as (.*)$")
-	//If we use same step definition for more than one step from feature file, we have to pass 
-	  the arguments as (.*)$ because passing data during run time will accept only this format
+@Given("Enter username as (.*)$")
+//If we use same step definition for more than one step from feature file, we have to pass 
+  the arguments as (.*)$ because passing data during run time will accept only this format
+
+we can use (.*)$ for integer values also but we have to convert it into integer after receiving it.
  
 @Given("Enter Username as {string}")	
 If we passing data nomally or the step is not used for more than one step from feature file we can
@@ -90,4 +92,5 @@ cucumber can not be run in parallel because of implimentation
 
 parallel run in cucumber can be achived by(only have example data will be run in parallel)
 runner class->dataprovider='true'
+
 

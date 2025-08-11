@@ -12,21 +12,21 @@ Automation Testing Types:
 ********** ******* ******
 Below are the different types of automation testing:
 
-Unit testing: Unit testing is a phase in software testing to test the smallest piece of code 
-known as a unit that can be logically isolated from the code. It is carried out during the development of the application.
+Unit testing: Unit testing is the process where you test the smallest functional unit of code.
 
-Integration testing: Integration testing is a phase in software testing in which individual software 
-components are combined and tested as a group. It is carried out to check the compatibility of the component with the specified 
-functional requirements.
+Integration testing: Verifies the interactions and data flow between integrated modules or components.
 
 Smoke testing: Smoke testing is a type of software testing that determines whether the built software is
-stable or not. It is the preliminary check of the software before its release in the market.
+stable or not. The smoke testing is done to verify if the most critical functionalities of the software are working as expected.
 
-Performance testing: Performance testing is a type of software testing that is carried out to 
-determine how the system performs in terms of stability and responsiveness under a particular load.
+Performance testing: Performance testing is used to test the speed, response time, stability, and resource usage under various load conditions.
 
 Regression testing: Regression testing is a type of software testing that confirms that previously developed software still works
 fine after the change and that the change has not adversely affected existing features.
+
+Sanity Testing:
+A subset of regression testing, focusing on a small portion of the system to ensure recent changes haven't broken core functionality.
+ To verify that minor changes or bug fixes haven't introduced new defects.
 
 Security testing: Security testing is a type of software testing that uncovers the risks, and vulnerabilities
 in the security mechanism of the software application. It helps an organization to identify the loopholes 
@@ -40,6 +40,7 @@ and checks the functionality, security, and reliability of the programming inter
 
 UI Testing: UI testing is a type of software testing that helps testers ensure that all the fields, buttons, 
 and other items on the screen function as desired.
+
 
 
 

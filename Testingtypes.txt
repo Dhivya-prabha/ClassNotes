@@ -1,3 +1,13 @@
+SDLC - Overview:
+*****************
+1.     Planning 
+2.     Analysis 
+3.     Design
+4.     Coding 
+5.     Testing 
+6.     Deployment
+7.     Maintenance
+
 Automation Testing Types:
 ********** ******* ******
 Below are the different types of automation testing:
@@ -30,6 +40,7 @@ and checks the functionality, security, and reliability of the programming inter
 
 UI Testing: UI testing is a type of software testing that helps testers ensure that all the fields, buttons, 
 and other items on the screen function as desired.
+
 
 
 

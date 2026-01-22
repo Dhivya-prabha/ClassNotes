@@ -41,7 +41,8 @@ The beauty of Selenium is all these classes will have the same method name,but o
  How do these classes have common method names? Here comes the concept of Interface.
 Have you ever understood why we write the code as WebDriver driver=new ChromeDriver(); instead of ChromeDriver driver=new ChromeDriver();
  WebDriver is an interface. Classes like Firefox,Chrome,Microsoft edge etc. will follow the rules imposed by WebDriver interface and 
-each class will implement the methods. You can also refer https://www.selenium.dev which is the selenium official website where you will find the WebDriver interface and its implementing classes.
+each class will implement the methods. You can also refer https://www.selenium.dev which is the selenium official website where 
+you will find the WebDriver interface and its implementing classes.
 Hence we write the syntax as WebDriver driver=new ChromeDriver(); driver object has access to the methods of Chrome Driver which are
 defined in Web Driver interface.
 In Java, an interface is a reference type that defines a collection of abstract methods (methods without implementation) that a class can implement.
@@ -136,6 +137,7 @@ public class MultiInterfaceClass implements InterfaceA, InterfaceB {
         System.out.println("MethodB from InterfaceB");
     }
 }
+
 
 
 

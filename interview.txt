@@ -10,6 +10,13 @@ val chromeOptions = new ChromeOptions
 chromeOptions.addArguments("--headless")
 new ChromeDriver(chromeOptions)
 
+EdgeOptions options = new EdgeOptions();
+options.addArguments("--headless=new");
+options.addArguments("--disable-gpu");
+
+FirefoxOptions options = new FirefoxOptions();
+options.setHeadless(true);
+
 ChromeOptions options = new ChromeOptions();  
 options.setHeadless(true); //Set Chrome option
 driver = new ChromeDriver(options);  
@@ -297,6 +304,7 @@ Business-critical flows
 API automation support
 Minimum UI dependency
 This reduces maintenance effort.
+
 
 
 

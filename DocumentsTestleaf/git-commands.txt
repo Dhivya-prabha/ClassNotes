@@ -1,3 +1,12 @@
+git checkout -b 
+git status
+git add
+git add  *.py
+git commit -m
+git push origin
+git push
+
+
 
 git branch -a	List all branches (local and remote)
 git branch [branch name]	Create a new branch
@@ -34,3 +43,4 @@ git log	View changes
 git log --summary	View changes (detailed)
 git log --oneline	View changes (briefly)
 git diff [source branch] [target branch]	Preview changes before merging
+

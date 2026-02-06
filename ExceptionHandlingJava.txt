@@ -1,4 +1,4 @@
-Exception Handling in Java:
+niException Handling in Java:
 *It is a mechanism to handle runtime Errors to handle the normal flow of prgram or application.
 *Runtime Errors like ClassNotFoundException,IOException,SQLException,RemoteException...
 
@@ -60,7 +60,14 @@ throws: This keyword is used to declare an exception. it doesnt throw exception.
 
 
 
-
+API
+200 – Success
+201 – Created
+400 – Bad request
+401 – Unauthorized
+403 – Forbidden
+404 – Not found
+500 – Server error
 
 
 
